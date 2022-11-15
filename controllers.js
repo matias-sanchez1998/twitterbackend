@@ -9,10 +9,10 @@ const client = new Client(APYKEY);
 export const getMovements = async (req, res) => {
     try {
         const username = req.params.username;
-        const tweet = await client.users.findUserByUsername(username,{
+        const tweet = await client.users.findUserByUsername('billgates',{
             'user.fields': ["created_at","description","location","name","username","url","profile_image_url","public_metrics"]
         });
-
+        console.log(tweet);
       res.json(tweet);
     } catch (error) {
       return res.status(500).json({
