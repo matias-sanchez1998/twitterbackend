@@ -1,8 +1,8 @@
 
 import { Client } from "twitter-api-sdk";
-import { bearer } from "./secrets.js";
+import {APYKEY} from './config.js'
 
-const client = new Client(bearer);
+const client = new Client(APYKEY);
 
 
 
